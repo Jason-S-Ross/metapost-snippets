@@ -2,7 +2,7 @@ leaderextension:=0.25cm;
 leadergap := 0.15cm;
 def _draw_dim(expr A, B, extang, leadang, obliqueang, textang, offset, Text) =
   % Generic function to draw extension lines
-  begingroup;
+  begingroup; save C, D, E, F, G, H, CA, cpen, lab, arr;
     pair C, D, E, F, G, H;
     pair CA;
     pen cpen;
@@ -48,7 +48,7 @@ def draw_oblique_dim(expr A, B, Text, offset, measang, extang, alt) =
   fi;
 enddef;
 def draw_angle_dim(expr A, B, C, Text, offset) =
-  begingroup;
+  begingroup; save cpen, D, E, F, G, H, I, J, ang, p, lab;
     cpen := currentpen;
     pickup defaultpen;
     pair D, E, F, G, H, I, J;
@@ -77,7 +77,7 @@ def draw_angle_dim(expr A, B, C, Text, offset) =
   endgroup;
 enddef;
 def draw_radial_dim(expr C, r, ang, Text, offset) =
-  begingroup;
+  begingroup; save A, B, D, lab;
     pair A, B, D;
     A := C + dir(ang) * r;
     B := C + dir(ang) * (r + offset);
