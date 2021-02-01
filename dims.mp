@@ -49,6 +49,7 @@ def draw_oblique_dim(expr A, B, Text, offset, measang, extang, alt) =
 enddef;
 def draw_angle_dim(expr A, B, C, Text, offset) =
   begingroup; save cpen, D, E, F, G, H, I, J, ang, p, lab;
+    pen cpen;
     cpen := currentpen;
     pickup defaultpen;
     pair D, E, F, G, H, I, J;
