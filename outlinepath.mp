@@ -1,5 +1,5 @@
 def get_outlined_path(expr p, d) =
-  begingroup;
+  begingroup; save penpath, mypen, L;
     path penpath[];
     pen mypen;
     numeric L;
